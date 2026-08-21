@@ -64,7 +64,7 @@ class TXRMFileWatcher(object):
 
         csv_path = self.processor.save_cumulative_csv()
         if not csv_path:
-            self._status("CSV update pending.")
+            self._status("Waiting for CSV access...")
             return False
 
         self.processed_files.add(self.pending_path)
