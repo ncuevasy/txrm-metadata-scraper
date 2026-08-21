@@ -14,7 +14,7 @@ See [`txrm_app/README.md`](txrm_app/README.md) for usage details.
 
 See [`PYTHON27.md`](PYTHON27.md) for Python 2.7, ZEISS/Xradia API, and `olefile` setup instructions.
 
-## Attribution
+## Acknowledgments
 
 This project is based on original code developed by **John True**. Subsequent modifications, simplification, and distribution updates were completed by the current maintainer.
 
