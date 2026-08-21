@@ -2,8 +2,6 @@
 
 Python 2.7 application for extracting metadata from ZEISS Xradia `.txrm` files using the Xradia Python API.
 
-## App
-
 The application and its documentation are in:
 
 ```text
@@ -12,9 +10,9 @@ txrm_app/
 
 See [`txrm_app/README.md`](txrm_app/README.md) for usage details.
 
-## Install
+## Required Environment
 
-See [`PYTHON27.md`](PYTHON27.md) for Python 2.7 and Xradia API setup instructions.
+See [`PYTHON27.md`](PYTHON27.md) for Python 2.7, ZEISS/Xradia API, and `olefile` setup instructions.
 
 ## Attribution
 
