@@ -14,7 +14,7 @@ See [`txrm_app/README.md`](txrm_app/README.md) for usage details.
 
 ## Install
 
-See [`INSTALL_PYTHON27.txt`](PYTHON27.txt) for Python 2.7 and Xradia API setup instructions.
+See [`PYTHON27.txt`](PYTHON27.txt) for Python 2.7 and Xradia API setup instructions.
 
 The required Xradia files are typically found under:
 
