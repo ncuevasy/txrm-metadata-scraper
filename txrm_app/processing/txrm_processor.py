@@ -14,7 +14,7 @@ class TXRMProcessor(object):
             os.makedirs(self.output_dir)
 
         self.all_metadata = []
-        self.backup_dir = r"\\VERSA542\versa542data\Scheiffele\backup_metadata"
+        self.backup_dir = r"..."
         self.metadata_extractor = MetadataExtractor()
 
     def save_metadata_txt(self, metadata, file_path):
