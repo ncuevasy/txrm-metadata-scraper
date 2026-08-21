@@ -1,0 +1,39 @@
+1. Install 64-bit Python 2.7 with Tkinter.
+
+2. Find the ZEISS/Xradia files, usually under:
+
+   C:\Program Files\Carl Zeiss X-ray Microscopy\Xradia Versa\<version>\
+
+   Most are in or under ScoutScan.
+
+3. Copy these into the root of Python 2.7 site-packages, for example:
+
+   C:\Python27.64\Lib\site-packages\
+
+   XradiaPy\
+   XradiaBasicDatasetAPI.py
+   _XradiaBasicDatasetAPI.pyd
+   XrmBasicDatasetAPI.dll
+   XrmUtility.dll
+   XrmTypes.dll
+   sqlite3.dll
+   hdf5dll.dll
+   mkl_rt.dll
+   zlib1.dll
+   szip.dll
+   libIRON.dll
+   cudart64_101.dll
+   libReconCommonUtility.dll
+   libReconCommon.dll
+   JsonParsor.dll
+   libPrjDataPreprocessing.dll
+   libFDK.dll
+
+   The DLLs are separate files; they are not inside XradiaPy.
+   Do not copy XradiaBasicDatasetAPI.dll; it is the .NET wrapper.
+
+4. Start:
+
+   TXRM_Metadata.bat
+
+No pip packages are required. If Python is installed elsewhere, use that Python 2.7 path instead.
