@@ -1,4 +1,4 @@
-## Python 2.7 & ZEISS Package
+## Python 2.7 & Xradia API
 Install **64-bit Python 2.7** with Tkinter.
 
 Find ZEISS files. They are usually located under:
