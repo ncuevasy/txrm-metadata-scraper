@@ -40,3 +40,17 @@ self.backup_dir = r"..."
 ```
 
 Manual mode runs once and does not change the automatic processing history.
+
+## Optional Desktop Shortcut
+
+`TXRM_Metadata.bat` is not required, but it can be used to launch the application with the correct Python 2.7 environment.
+
+A desktop shortcut can be created to launch the GUI directly without opening a command window.
+
+Set the shortcut target to:
+
+```text
+C:\Python27.64\pythonw.exe "C:\path\to\TXRM-Metadata-Extractor\txrm_app\main_gui.pyw"
+```
+
+Then go to **Properties > Shortcut > Advanced...** and enable **Run as administrator**.
