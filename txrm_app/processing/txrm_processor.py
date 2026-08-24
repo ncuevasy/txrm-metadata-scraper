@@ -315,9 +315,12 @@ class TXRMProcessor(object):
             if not os.path.exists(self.backup_dir):
                 os.makedirs(self.backup_dir)
 
+            watched_folder = os.path.dirname(self.output_dir)
+            folder_name = os.path.basename(os.path.normpath(watched_folder))
+
             backup_path = os.path.join(
                 self.backup_dir,
-                os.path.basename(csv_path)
+                "{0}_{1}".format(folder_name, os.path.basename(csv_path))
             )
             shutil.copy2(csv_path, backup_path)
 
