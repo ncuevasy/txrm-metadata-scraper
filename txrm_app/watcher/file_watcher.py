@@ -70,14 +70,14 @@ class TXRMFileWatcher(object):
         self.processed_files.add(self.pending_path)
         self._save_processed()
         self.pending_path = None
-        self._status("Automatic detection active.")
+        self._status("Watching for new TXRM files...")
         return True
 
     def _process_file(self, path):
         self._status("Processing...")
 
         if not self.processor.process_single_file(path):
-            self._status("Automatic detection active.")
+            self._status("Watching for new TXRM files...")
             return
 
         self.pending_path = path
@@ -85,7 +85,7 @@ class TXRMFileWatcher(object):
 
     def watch(self):
         interval = self.config.get("polling_interval", 60)
-        self._status("Automatic detection active.")
+        self._status("Watching for new TXRM files...")
 
         while not self.stop_event.is_set():
             try:
