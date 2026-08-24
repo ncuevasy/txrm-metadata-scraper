@@ -13,8 +13,13 @@
 ```
 
 The CSV is cumulative. `processed_files.json` prevents duplicate processing.
-
 Drift files, `$RECYCLE.BIN`, and `metadata_output` are skipped.
+
+It also creates an individual metadata text file next to each succesfully processed TXRM:
+
+```text
+<file_name>_metadata.txt
+```
 
 A backup copy of the automatic CSV is also attempted at the configured network backup location. If that location is unavailable, the main CSV is still kept.
 
