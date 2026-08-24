@@ -60,13 +60,6 @@ class TXRMProcessor(object):
     def _get_file_path(self, metadata):
         return metadata.get("file_path", "")
 
-    def _get_file_hyperlink(self, metadata):
-        path = metadata.get("file_path", "")
-        if not path:
-            return ""
-        url = "file:///{0}".format(path.replace("\\", "/").lstrip("/"))
-        return '=HYPERLINK("{0}","Open File")'.format(url)
-
     def _calculate_xray_power(self, metadata):
         settings = metadata.get("machine_settings", {})
         power = settings.get("power")
@@ -189,7 +182,6 @@ class TXRMProcessor(object):
     def _column_order(self):
         columns = [
             ("file_name", self._get_file_name),
-            ("file_hyperlink", self._get_file_hyperlink),
             ("ct_voxel_size_um", lambda m: str(m.get("machine_settings", {}).get("pixel_size", "0.0"))),
             ("ct_objective", lambda m: str(m.get("machine_settings", {}).get("objective", ""))),
             ("ct_number_images", lambda m: str(m.get("image_properties", {}).get("total_projections", "0"))),
