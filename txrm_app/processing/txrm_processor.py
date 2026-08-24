@@ -63,22 +63,15 @@ class TXRMProcessor(object):
     def _calculate_xray_power(self, metadata):
         settings = metadata.get("machine_settings", {})
         power = settings.get("power")
+        
         if power not in (None, ""):
             return str(power)
-        try:
-            voltage = float(settings.get("voltage", 0))
-            current_ua = float(settings.get("current", 0))
-            if voltage > 0 and current_ua > 0:
-                return str(round((current_ua / 1000000.0) * voltage, 2))
-        except (ValueError, TypeError):
-            pass
+        
         return ""
 
     def _calculate_xray_current(self, metadata):
         settings = metadata.get("machine_settings", {})
-        current = settings.get("current")
-        if current not in (None, ""):
-            return str(current)
+ 
         try:
             power = float(settings.get("power", 0))
             voltage = float(settings.get("voltage", 0))
