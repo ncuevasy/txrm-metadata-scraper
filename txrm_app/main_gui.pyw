@@ -42,7 +42,7 @@ class TXRMApp(object):
         )
 
         tk.Radiobutton(
-            frame, text="Automatic Detection", variable=self.mode, value="watch"
+            frame, text="Monitoring", variable=self.mode, value="watch"
         ).grid(row=1, column=0, sticky="w")
 
         tk.Radiobutton(
@@ -81,7 +81,7 @@ class TXRMApp(object):
 
         tk.Label(
             frame,
-            text="Keep this window open while Automatic Detection is running.",
+            text="Keep this window open while monitoring!",
             fg="#9A6700"
         ).grid(row=7, column=0, columnspan=3, sticky="w", pady=(8, 0))
 
